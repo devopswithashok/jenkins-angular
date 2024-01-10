@@ -5,18 +5,21 @@ pipeline {
     }
 
     stages {
-        stage('Node Version check') {
+        stage('Node Version 16') {
             steps {
+                tools {
+                    nodejs 'Nodejs16'
+                }
                 // Install Node.js and npm
                 // This assumes you have Node.js and npm installed on your Jenkins agent
                 sh 'node -v'
             }
         }
 
-        stage('NPM Version') {
+        stage('Node Version 20') {
             steps {
                 // NPM Version
-                sh 'npm -v'
+                sh 'node -v'
             }
         }
         

@@ -1,14 +1,10 @@
 pipeline {
     agent any
+    tools {
+        nodejs 'Nodejs20'
+    }
 
     stages {
-            stage('Change Node Version ') {
-            steps {
-                // Install Node.js and npm
-                // This assumes you have Node.js and npm installed on your Jenkins agent
-                sh 'nvm use v20.10.0'
-            }
-        }
         stage('Node Version check') {
             steps {
                 // Install Node.js and npm
